@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: active_schools_count
+    description: "Counts the number of schools actively initiating student payments on the platform in the last 3 months."
+    columns:
+      - name: active_schools_count
+        description: "The number of active schools initiating student payments in the last 3 months."

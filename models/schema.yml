@@ -1,0 +1,98 @@
+version: 2
+
+sources:
+  - name: mysql_source
+    description: "Source data from the MySQL database"
+    database: forge
+    schema: forge
+    tables:
+      - name: account_receivables
+        description: "Account receivables details"
+        columns:
+          - name: id
+            description: "Primary key"
+          - name: institution_id
+            description: "ID of the institution"
+          - name: servicer_queue_id
+            description: "ID of the servicer queue"
+          - name: title
+            description: "Title of the receivable"
+          - name: type
+            description: "Type of receivable"
+          
+      - name: institutions
+        description: "Institution details"
+        columns:
+          - name: id
+            description: "Primary key"
+          - name: name
+            description: "Name of the institution"
+          - name: active
+            description: "Active status of the institution"
+          
+      - name: programs
+        description: "Programs details"
+        columns:
+          - name: id
+            description: "Primary key"
+          - name: institution_id
+            description: "ID of the institution"
+          - name: name
+            description: "Name of the program"
+
+      - name: students
+        description: "Student details"
+        columns:
+          - name: id
+            description: "Primary key"
+          - name: program_id
+            description: "ID of the program"
+          - name: enrollment_status
+            description: "Enrollment status of the student"
+
+      - name: payments
+        description: "Payment details"
+        columns:
+          - name: id
+            description: "Primary key"
+          - name: student_id
+            description: "ID of the student"
+          - name: amount
+            description: "Amount of the payment"
+          - name: status
+            description: "Status of the payment"
+          - name: payment_date
+            description: "Date of the payment"
+
+      - name: sales_team
+        description: "Sales team details"
+        columns:
+          - name: id
+            description: "Primary key"
+          - name: name
+            description: "Name of the sales team member"
+
+      - name: revenue
+        description: "Revenue details"
+        columns:
+          - name: id
+            description: "Primary key"
+          - name: institution_id
+            description: "ID of the institution"
+          - name: amount
+            description: "Amount of the revenue"
+          - name: ae_id
+            description: "ID of the account executive"
+          - name: revenue_date
+            description: "Date of the revenue"
+
+models:
+  - name: bronze
+    description: "Bronze layer with raw data from MySQL"
+    schema: bronze
+  - name: silver
+    description: "Silver layer with cleaned and joined data"
+    schema: silver
+  - name: gold
+    description: "Gold layer with analytics-ready data"
+    schema: gold

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: tuition_capture_summary
+    description: "Calculates the percentage of each school’s full tuition revenue that Mia Share is capturing."
+    columns:
+      - name: institution_id
+        description: "The ID of the institution."
+      - name: tuition_capture_percentage
+        description: "The percentage of the institution's full tuition revenue that Mia Share is capturing."

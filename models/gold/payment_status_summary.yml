@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: payment_status_summary
+    description: "Summarizes the percentage of payment plans that are fully paid, partially paid and actively still paying, and sent to collections."
+    columns:
+      - name: fully_paid_count
+        description: "The count of fully paid payment plans."
+      - name: actively_paying_count
+        description: "The count of payment plans that are partially paid and actively still paying."
+      - name: collections_count
+        description: "The count of payment plans that have been sent to collections."
+      - name: fully_paid_percentage
+        description: "The percentage of payment plans that are fully paid."
+      - name: actively_paying_percentage
+        description: "The percentage of payment plans that are partially paid and actively still paying."
+      - name: collections_percentage
+        description: "The percentage of payment plans that have been sent to collections."

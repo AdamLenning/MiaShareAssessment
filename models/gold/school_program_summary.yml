@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: school_program_summary
+    description: "Summarizes the number of programs each school has on the Mia Share platform and the average number of students enrolled in each program."
+    columns:
+      - name: institution_id
+        description: "The ID of the institution."
+      - name: program_count
+        description: "The number of programs offered by the institution."
+      - name: avg_student_count
+        description: "The average number of students enrolled in each program at the institution."

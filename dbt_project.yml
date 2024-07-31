@@ -6,7 +6,7 @@ name: 'mia_share_assessment'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'mia_share_assessment'
+profile: 'mia_share_mysql'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
