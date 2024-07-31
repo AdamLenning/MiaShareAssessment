@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 select
     institution_id,
     tuition_capture_percentage

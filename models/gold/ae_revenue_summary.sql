@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 select 
     ae_id,
     total_revenue

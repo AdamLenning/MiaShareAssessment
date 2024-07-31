@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 select
     sum(fully_paid_count) as fully_paid_count,
     sum(actively_paying_count) as actively_paying_count,
